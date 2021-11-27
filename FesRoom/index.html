@@ -9,26 +9,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <style>
-        /* #background{
-            background-image: url('/img/Main.png');
+        body{
+            background-image: url('../img/Main_noButton.png');
             background-size: cover;
             min-height: 100%;
-        } */
-        /* #background{
-            background: black;
-        } */
+        }
         *{
             font-family: 'East Sea Dokdo', cursive;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: white;
+        }
+        #gamestart{
+            font-size:70px;
+            position: absolute;
+            text-align: center;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        a.tip:hover {
+            cursor: help;
+            position: relative;
+        }
+        
+        a.tip span {        
+            display: none;
+        }
+
+        a.tip:hover span{
+            position: absolute;
+            transform: translate(-40%, -50%);
+            background: black;
+            width: 1280px;
+            display: block;
+        }
+        span{
+            font-size: xx-large;
         }
     </style>
 </head>
-<body>
-    <div style="text-align: center;" id='background'>
-        <img src="/img/Main_noButton.png" alt="Main" width="1280" height="720">
-        <p>게임 시작</p>
-    </div>
-    <!-- <div>FesRoom</div>
-    <div>Game Start</div>
-    <div>Exit</div> -->
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+    <!-- - oncontextmenu='return false' - 우클릭방지
+    - onselectstart='return false' - 블럭선택방지
+    - ondragstart='return false' - 드래그방지
+
+    출처: https://hyunssssss.tistory.com/226 [현's 블로그] -->
+    <p id="gamestart">
+        <a href="prologue.html">게임 시작</a><br> 
+        <a class="tip">게임 설명
+            <span>학교 축제 준비로 한창인 00고등학교. 학생회 부원인 주인공은 학교 축제 위원을 맡게 되었다. 축제 위원으로서 각 부스들을 돌아보던 중, 친구로부터 방탈출 부스 사전 테스트를 해달라는 부탁을 받게되는데…<br>
+            조작키 : 마우스</span>
+        </a><br>
+        <a href="">종료</a>
+    </p>
 </body>
 </html>

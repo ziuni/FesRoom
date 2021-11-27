@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프롤로그</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <script>
+        function action_imageView(url) {
+            if(url) {
+            //alert(url);
+                var imgW = document.getElementById('img1').naturalWidth;
+        
+                var imgH = document.getElementById('img1').naturalHeight;
+        
+                var imgWindow = window.open("", "_image_view_", "width="+imgW+", height="+imgH);
+        
+                imgWindow.document.write("<img src='"+url+"'>");
+        
+            }
+        }
+    </script>
+    <style>
+        body{
+            background-image: url('../img/Library.png');
+            background-size: cover;
+            min-height: 100%;
+            /* width: 1280px;
+            height: 720px; */
+        }
+        *{
+            font-family: 'East Sea Dokdo', cursive;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: white;
+        }
+        #gamestart{
+            font-size:70px;
+            position: absolute;
+            text-align: center;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<!-- <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'> -->
+<body>
+    <a href="BlueBook.html"><img id="BlueBook" src="../img/400X200.png"></a>
+
+    <img src="../img/400X200.png" onclick="action_imageView('../img/400X200.png')" id="img1" width="50px" height="50px">
+    
+    <!-- <button name="test" type="button" onclick="alert('투명함');" style="width:100px;height:100px;cursor:hand;filter:alpha(opacity=1);position:absolute;top:10px;left:30px;z-index:100"> -->
+
+    <!-- <button name="test2" type="button" onclick="alert('투명하지않음');" style="width:100px;height:100px;cursor:hand;position:absolute;top:180px;left:30px;z-index:100"> -->
+
+</body>
+</html>

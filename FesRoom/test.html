@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        a.tip {
+       
+           border-bottom: 1px dashed;
+       
+           text-decoration: none
+       
+       }
+       
+       a.tip:hover {
+       
+           cursor: help;
+       
+           position: relative
+       
+       }
+       
+       a.tip span {
+       
+           display: none
+       
+       }
+       
+       a.tip:hover span {
+       
+           border: #c0c0c0 1px dotted;
+       
+           padding: 5px 20px 5px 5px;
+       
+           display: block;
+       
+           z-index: 100;
+       
+           background: url(../images/status-info.png) #f0f0f0 no-repeat 100% 5%;
+       
+           left: 0px;
+       
+           margin: 10px;
+       
+           width: 250px;
+       
+           position: absolute;
+       
+           top: 10px;
+       
+           text-decoration: none
+       
+       }
+        </style>
+</head>
+<body>
+       <a href="#" class="tip">Link<span>This is the CSS tooltip showing up when you mouse over the link</span></a>
+
+       <script>
+
+        function action_imageView(url) {
+        
+            if(url) {
+        
+                var imgW = document.getElementById('img1').naturalWidth;
+        
+                var imgH = document.getElementById('img1').naturalHeight;
+        
+                var imgWindow = window.open("", "_image_view_", "width="+imgW+", height="+imgH);
+        
+                imgWindow.document.write("<img src='"+url+"'>");
+        
+            }
+        
+        }
+        
+        </script>
+        
+        <img src="../img/Library.png" width="100" onclick="action_imageView('../img/Library.png') "id='image1'>
+</body>
+</html>
