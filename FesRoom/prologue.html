@@ -8,38 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
-    <script>
-        function action_imageView(url) {
-            if(url) {
-            //alert(url);
-                var imgW = document.getElementById('img1').naturalWidth;
-        
-                var imgH = document.getElementById('img1').naturalHeight;
-        
-                var imgWindow = window.open("", "_image_view_", "width="+imgW+", height="+imgH);
-        
-                imgWindow.document.write("<img src='"+url+"'>");
-        
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body{
             background-image: url('../img/Library.png');
             background-size: cover;
             min-height: 100%;
-            /* width: 1280px;
-            height: 720px; */
         }
         *{
             font-family: 'East Sea Dokdo', cursive;
             text-decoration: none;
-        }
-        a{
-            color: black;
-        }
-        a:hover{
-            color: white;
         }
         #gamestart{
             font-size:70px;
@@ -49,17 +27,114 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #BlueBook{
+            position: absolute;
+            transform: translate(-10px, 400px);
+            width: 50px; 
+            height: 240px;
+        }
+        #BrownBook{
+            position: absolute;
+            transform: translate(360px, 600px);
+            width: 60px; 
+            height: 180px;
+        }
+        #GreenBook{
+            position: absolute;
+            transform: translate(755px, 240px);
+            width: 50px; 
+            height: 150px;
+        }
     </style>
 </head>
 <!-- <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'> -->
 <body>
-    <a href="BlueBook.html"><img id="BlueBook" src="../img/400X200.png"></a>
-
-    <img src="../img/400X200.png" onclick="action_imageView('../img/400X200.png')" id="img1" width="50px" height="50px">
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+                <img id="BlueBook" class="BookImg" src="../img/BlueBook.png" alt="BlueBook.png">
     
-    <!-- <button name="test" type="button" onclick="alert('투명함');" style="width:100px;height:100px;cursor:hand;filter:alpha(opacity=1);position:absolute;top:10px;left:30px;z-index:100"> -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- <button name="test2" type="button" onclick="alert('투명하지않음');" style="width:100px;height:100px;cursor:hand;position:absolute;top:180px;left:30px;z-index:100"> -->
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+           <img id="BrownBook" class="BookImg" src="../img/BrownBook.png" alt="BrownBook.png" width="500" height="300">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+                <input type="image" src="../img/GreenBook.png" id="GreenBook" class="BookImg">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        // var img = document.getElementById('myImg');
+        var img = document.querySelectorAll('.BookImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for(var i = 0; i < img.length; i++){
+            img[i].onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+            }
+        }
+        
+        
+        
+        // When the user clicks on <span> (x), close the modal
+        modal.onclick = function() {
+            img01.className += " out";
+            setTimeout(function() {
+               modal.style.display = "none";
+               img01.className = "modal-content";
+             }, 400);
+            
+         }    
+        
+        // function click(){
+        //     document.getElementById("BlueBook").style.visibility='hidden';
+        // }
+    </script>
 
 </body>
 </html>
