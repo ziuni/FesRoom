@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인 방</title>
+    <title>음악실</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
         body{
             background-image: url('../img/Music room.png');
             background-size: cover;
-            min-height: 100%;
+            background-repeat: no-repeat;
         }
         *{
             font-family: 'East Sea Dokdo', cursive;
@@ -27,11 +27,89 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #door{
+            position: absolute;
+            transform: translate(650px, 220px);
+            width: 200px; 
+            height: 400px;
+        }
+        #Problem1{
+            position: absolute;
+            transform: translate(330px, 500px);
+            width: 30px; 
+            height: 70px;
+        }
+        #Problem2{
+            position: absolute;
+            transform: translate(875px, 550px);
+            width: 30px; 
+            height: 50px;
+            opacity: 0;
+        }
+        #Problem3{
+            position: absolute;
+            transform: translate(545px, 540px);
+            width: 50px; 
+            height: 100px;
+            
+        }
     </style>
 </head>
 <body>
    
+    <img onclick="javascript:location.href='ScienceRoom.html';" style="cursor:pointer;" src="../img/sciencedoor.png" id="door">
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+           <img id="Problem1" class="ProblemImg" style="cursor:pointer;" src="../img/Musicproblem1.png" alt="Musicproblem1.png" >
     
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+           <img id="Problem2" class="ProblemImg" style="cursor:pointer;" src="../img/Music problem2.png" alt="Musicproblem2.png" width="500" height="300">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+                <input type="image" style="cursor:pointer;" src="../img/Music problem3.png" id="Problem3" class="ProblemImg">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         // Get the modal
@@ -39,7 +117,7 @@
         
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         // var img = document.getElementById('myImg');
-        var img = document.querySelectorAll('.BookImg');
+        var img = document.querySelectorAll('.ProblemImg');
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
 
