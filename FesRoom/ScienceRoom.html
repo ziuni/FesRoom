@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과학실</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            background-image: url('../img/Science lab.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        *{
+            font-family: 'East Sea Dokdo', cursive;
+            text-decoration: none;
+        }
+        #main{
+            font-size:70px;
+            position: absolute;
+            text-align: center;
+            transform: translate(1090px, 270px);
+        }
+        #door{
+            position: absolute;
+            transform: translate(1060px, 250px);
+            width: 170px; 
+            height: 280px;
+            opacity: 0;
+        }
+        #Problem1{
+            position: absolute;
+            transform: translate(670px, 80px);
+            width: 220px; 
+            height: 70px;
+            opacity: 0;
+        }
+        #Problem2{
+            position: absolute;
+            transform: translate(350px, 540px);
+            width: 170px; 
+            height: 100px;
+            opacity: 0;
+        }
+        #Problem3{
+            position: absolute;
+            transform: translate(755px, 380px);
+            width: 100px; 
+            height: 120px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <img onclick="javascript:location.href='MainRoom.html';" style="cursor:pointer;" src="../img/door.png" id="door"/>
+    <div id="main">MAIN</div>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+           <img id="Problem1" class="ProblemImg" style="cursor:pointer;" src="../img/scienceProblem1.png" alt="scienceProblem1.png" >
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+           <img id="Problem2" class="ProblemImg" style="cursor:pointer;" src="../img/scienceProblem2.png" alt="Musicproblem2.png" width="500" height="300">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+               <!-- Image Zoom HTML -->
+                <input type="image" style="cursor:pointer;" src="../img/scienceProblem3.png" id="Problem3" class="ProblemImg">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+    </div>
+                <!-- End Image Zoom HTML -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        // var img = document.getElementById('myImg');
+        var img = document.querySelectorAll('.ProblemImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for(var i = 0; i < img.length; i++){
+            img[i].onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+            }
+        }
+        
+        
+        
+        // When the user clicks on <span> (x), close the modal
+        modal.onclick = function() {
+            img01.className += " out";
+            setTimeout(function() {
+               modal.style.display = "none";
+               img01.className = "modal-content";
+             }, 400);
+            
+         }    
+        
+        // function click(){
+        //     document.getElementById("BlueBook").style.visibility='hidden';
+        // }
+    </script>
+
+</body>
+</html>
