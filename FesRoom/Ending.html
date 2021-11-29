@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; url=index.html">
+    <title>엔딩</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url('../img/Ending.png');
+            background-size: cover;
+        }
+        *{
+            font-family: 'East Sea Dokdo', cursive;
+            text-decoration: none;
+            text-align: center;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: white;
+        }
+        #gamestart{
+            font-size:70px;
+            /* position: absolute; */
+            transform: translate(0px, 300px);
+        }
+
+        a.tip:hover {
+            cursor: help;
+            position: relative;
+        }
+        
+        a.tip span {        
+            display: none;
+        }
+
+        a.tip:hover span{
+            position: absolute;
+            transform: translate(-40%, -50%);
+            background: black;
+            width: 1280px;
+            display: block;
+        }
+        span{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+    <!-- - oncontextmenu='return false' - 우클릭방지
+    - onselectstart='return false' - 블럭선택방지
+    - ondragstart='return false' - 드래그방지
+    출처: https://hyunssssss.tistory.com/226 [현's 블로그] -->
+    <p id="gamestart">
+        축하합니다. 탈출에 성공하셨습니다.<br>
+        <!-- <a href="javascript:frameclose()">종료</a> -->
+    </p>
+    <script>
+        function frameclose() { 
+        // parent.close() 
+       
+        // window.open('','_self').close();
+
+        self.close() 
+        } 
+    </script>
+</body>
+</html>
