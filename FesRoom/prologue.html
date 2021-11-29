@@ -4,137 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; url=MainRoom.html"> 
     <title>프롤로그</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body{
-            background-image: url('../img/Library.png');
-            background-size: cover;
-            min-height: 100%;
-        }
-        *{
-            font-family: 'East Sea Dokdo', cursive;
-            text-decoration: none;
-        }
-        #gamestart{
-            font-size:70px;
-            position: absolute;
-            text-align: center;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #BlueBook{
-            position: absolute;
-            transform: translate(-10px, 400px);
-            width: 50px; 
-            height: 240px;
-        }
-        #BrownBook{
-            position: absolute;
-            transform: translate(360px, 600px);
-            width: 60px; 
-            height: 180px;
-        }
-        #GreenBook{
-            position: absolute;
-            transform: translate(755px, 240px);
-            width: 50px; 
-            height: 150px;
-        }
-    </style>
 </head>
-<!-- <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'> -->
+<style>
+    body{
+        background-image: url('../img/prologue.png');
+        background-size: cover;
+        min-height: 100%;
+    }
+    </style>
 <body>
-    <section>
-        <div class="rt-container">
-              <div class="col-rt-12">
-                  <div class="Scriptcontent">
-               <!-- Image Zoom HTML -->
-                <img id="BlueBook" class="BookImg" src="../img/BlueBook.png" alt="BlueBook.png">
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <img class="modal-content" id="img01">
-    </div>
-                <!-- End Image Zoom HTML -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="rt-container">
-              <div class="col-rt-12">
-                  <div class="Scriptcontent">
-               <!-- Image Zoom HTML -->
-           <img id="BrownBook" class="BookImg" src="../img/BrownBook.png" alt="BrownBook.png" width="500" height="300">
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <img class="modal-content" id="img01">
-    </div>
-                <!-- End Image Zoom HTML -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="rt-container">
-              <div class="col-rt-12">
-                  <div class="Scriptcontent">
-               <!-- Image Zoom HTML -->
-                <input type="image" src="../img/GreenBook.png" id="GreenBook" class="BookImg">
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <img class="modal-content" id="img01">
-    </div>
-                <!-- End Image Zoom HTML -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-        
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        // var img = document.getElementById('myImg');
-        var img = document.querySelectorAll('.BookImg');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-
-        for(var i = 0; i < img.length; i++){
-            img[i].onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            modalImg.alt = this.alt;
-            captionText.innerHTML = this.alt;
-            }
-        }
-        
-        
-        
-        // When the user clicks on <span> (x), close the modal
-        modal.onclick = function() {
-            img01.className += " out";
-            setTimeout(function() {
-               modal.style.display = "none";
-               img01.className = "modal-content";
-             }, 400);
-            
-         }    
-        
-        // function click(){
-        //     document.getElementById("BlueBook").style.visibility='hidden';
-        // }
-    </script>
-
+	메타 태그를 이용하면 다른 페이지로 자동으로 이용할 수 있습니다.
 </body>
 </html>
