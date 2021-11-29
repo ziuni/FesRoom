@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         body{
-            background-image: url('../img/Library.png');
+            background-image: url('../img/Library2.png');
             background-size: cover;
-            min-height: 100%;
+            background-repeat: no-repeat;
         }
         *{
             font-family: 'East Sea Dokdo', cursive;
@@ -32,29 +32,43 @@
             transform: translate(-10px, 400px);
             width: 50px; 
             height: 240px;
+            opacity: 0;
+            cursor:pointer;
         }
         #BrownBook{
             position: absolute;
             transform: translate(360px, 600px);
             width: 60px; 
             height: 180px;
+            opacity: 0;
+            cursor:pointer;
         }
         #GreenBook{
             position: absolute;
             transform: translate(755px, 240px);
             width: 50px; 
             height: 150px;
+            opacity: 0;
+            cursor:pointer;
         }
         #door{
             position: absolute;
-            transform: translate(1000px, -150px);
-            width: 700px; 
-            height: 900px;
+            transform: translate(1150px, 290px);
+            width: 360px; 
+            height: 500px;
+            opacity: 0;
+        }
+        #musicicon{
+            position: absolute;
+            transform: translate(1250px, 210px);
+            width: 150px; 
+            height: 150px;
         }
     </style>
 </head>
 <!-- <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'> -->
 <body>
+    <img id="musicicon"  src="../img/MusicIcon.png" alt="MusicIcon.png">
     <section>
         <div class="rt-container">
               <div class="col-rt-12">
@@ -106,7 +120,7 @@
         </div>
     </section>
 
-    <img onclick="javascript:location.href='MusicRoom.html';" style="cursor:pointer;" src="../img/door.png" id="door">
+    <img onclick="javascript:location.href='MusicRoom.html';" style="cursor:pointer;" src="../img/musicdoor.png" id="door">
 
     <script>
         // Get the modal
